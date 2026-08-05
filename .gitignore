@@ -1,0 +1,22 @@
+# Vim swap files
+
+*.swp
+*.swo
+*~
+
+# macOS
+
+.DS_Store
+
+# Linux thumbnails
+
+.thumbs
+
+# Neovim logs
+
+log
+*.log
+
+# Session files (only if you ever store them inside the config directory)
+
+sessions/

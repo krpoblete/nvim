@@ -59,19 +59,19 @@ return {
         })
       end, { desc = "Find Tests" })
 
-      vim.keymap.set("n", "<leader>fmg", function()
+      vim.keymap.set("n", "<leader>fz", function()
         builtin.find_files({
           cwd = "database/migrations",
         })
       end, { desc = "Find Migrations" })
 
-      vim.keymap.set("n", "<leader>ffa", function()
+      vim.keymap.set("n", "<leader>fy", function()
         builtin.find_files({
           cwd = "database/factories",
         })
       end, { desc = "Find Factories" })
 
-      vim.keymap.set("n", "<leader>fsd", function()
+      vim.keymap.set("n", "<leader>fk", function()
         builtin.find_files({
           cwd = "database/seeders",
         })

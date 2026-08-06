@@ -4,7 +4,7 @@ return {
 
     config = function()
       require("auto-session").setup({
-        auto_restore = true,
+        auto_restore = false,
         auto_save = true,
 
         suppressed_dirs = {

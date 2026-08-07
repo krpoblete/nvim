@@ -11,7 +11,7 @@ return {
       local Terminal = require("toggleterm.terminal").Terminal
 
       local postgres = Terminal:new({
-        cmd = "bash -c 'psql -U postgres; exec bash'",
+        cmd = "bash -c 'psql -h 127.0.0.1 -U postgres; exec bash'",
         dir = "git_dir",
         direction = "float",
         hidden = true,

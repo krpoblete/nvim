@@ -17,9 +17,21 @@ return {
         capabilities = capabilities,
       })
 
+      vim.lsp.config("laravel_lsp", {
+        cmd = { "laravel-lsp" },
+        filetypes = { "php", "blade" },
+        root_markers = {
+          "artisan",
+          "composer.json",
+          ".git",
+        },
+        capabilities = capabilities,
+      })
+
       vim.lsp.enable({
         "lua_ls",
         "intelephense",
+        "laravel_lsp",
       })
 
       vim.api.nvim_create_autocmd("LspAttach", {

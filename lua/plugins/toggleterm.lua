@@ -10,6 +10,13 @@ return {
 
       local Terminal = require("toggleterm.terminal").Terminal
 
+      local postgres = Terminal:new({
+        cmd = "bash -c 'psql -U postgres; exec bash'",
+        dir = "git_dir",
+        direction = "float",
+        hidden = true,
+      })
+
       local artisan = Terminal:new({
         dir = "git_dir",
         direction = "float",
@@ -64,6 +71,12 @@ return {
         "<cmd>ToggleTerm<CR>",
         { desc = "Toggle Terminal" }
       )
+
+      vim.keymap.set("n", "<leader>lp", function()
+        postgres:toggle()
+      end, {
+        desc = "PostgreSQL Shell",
+      })
 
       vim.keymap.set("n", "<leader>ta", function()
         artisan:toggle()

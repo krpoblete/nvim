@@ -59,6 +59,12 @@ return {
         })
       end, { desc = "Find Tests" })
 
+      vim.keymap.set("n", "<leader>fd", function()
+        builtin.find_files({
+          cwd = "database",
+        })
+      end, { desc = "Find Database Files" })
+
       vim.keymap.set("n", "<leader>fz", function()
         builtin.find_files({
           cwd = "database/migrations",

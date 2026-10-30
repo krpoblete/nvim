@@ -28,10 +28,15 @@ return {
         capabilities = capabilities,
       })
 
+      vim.lsp.config("ts_ls", {
+        capabilities = capabilities,
+      })
+
       vim.lsp.enable({
         "lua_ls",
         "intelephense",
         "laravel_lsp",
+        "ts_ls",
       })
 
       vim.api.nvim_create_autocmd("LspAttach", {
